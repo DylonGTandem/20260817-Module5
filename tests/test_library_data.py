@@ -30,8 +30,10 @@ class TestDataLoading(unittest.TestCase):
          self.assertTrue((loan_data['date_delta'] >= 0).all())
 
 if __name__ == "__main__":
+       '''
        # Generate log file path
        out = Path(script_dir.parent / 'library_app' / 'final_app' / 'log.txt')
        with out.open("a") as f:
         f.write(f"Library data tested at [{datetime.now()}]\n")
+       '''
        unittest.main()

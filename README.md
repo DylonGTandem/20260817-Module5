@@ -40,3 +40,9 @@ customers_data_cleaned.csv - Cleaned and deduplicated customer records.
 customers_row_counts_summary.csv - Step-by-step audit trail of row drops across the customer cleaning lifecycle. 
 
 log.txt - Execution timestamp log tracking successful artifact generation. 
+
+## Next Steps - End to End Automation
+
+This can be turned into an automated process, where files are automatically picked up from a specified location, have the process automatically triggered and then exported to an SQL database. 
+
+The SQL database can then be linked to a Power BI dashboard wihch allows the cleaned data to be accessed, in addition to the cleaning information and when the last file ingestion, cleaning and testing was performed.

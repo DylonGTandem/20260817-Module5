@@ -23,12 +23,13 @@ When the cleaning process is run, the output files are generated and a log file 
 
 ![Log File](images\log.png)
 
-
 ## Output Files Summary
 
-| `loan_data_cleaned.csv` | Sanitized, validated, and duration-enriched book loan data. |
-| `loan_errors.csv` | Quarantined rows where loan duration logic failed (`date_delta < 0`). |
-| `loan_data_row_counts_summary.csv` | Step-by-step audit trail of row drops across the book cleaning lifecycle. |
-| `customers_data_cleaned.csv` | Cleaned and deduplicated customer records. |
-| `customers_row_counts_summary.csv` | Step-by-step audit trail of row drops across the customer cleaning lifecycle. |
-| `log.txt` | Execution timestamp log tracking successful artifact generation. |
+The pipeline takes the two source files and generates 6 files as an output, with the CSV's being replaced and the log file being added to on each run. 
+
+loan_data_cleaned.csv - Sanitized, validated, and duration-enriched book loan data.
+loan_errors.csv - Quarantined rows where loan duration logic failed (date returned was before checkout date). 
+loan_data_row_counts_summary.csv - Step-by-step audit trail of row drops across the book cleaning lifecycle. 
+customers_data_cleaned.csv - Cleaned and deduplicated customer records. 
+customers_row_counts_summary.csv - Step-by-step audit trail of row drops across the customer cleaning lifecycle. 
+log.txt - Execution timestamp log tracking successful artifact generation. 

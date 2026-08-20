@@ -5,25 +5,25 @@ I have created a Python app which takes two datasets for a library which contain
 
 Here is a summary of the cleaning steps and how many rows were removed from each dataset.
 
-![Data Cleaning Summary](images\cleaning_summary.png)
+![Data Cleaning Summary](images/cleaning_summary.png)
 
 ## Book Loans
 
 The book loans data was validated to confirm that the returned date was after the checkout date, if this was not the case then I exported them to a separate file. The figure below shows the books and dates which were removed from the dataset.
 
-![Book Loan Errors](images\book_loan_errors.png)
+![Book Loan Errors](images/book_loan_errors.png)
 
 ## Customers
 
 There was a single customer which had no name or id, so it was removed from the set. Below is the cleaned customer list.
 
-![Customers](images\customers.png)
+![Customers](images/customers.png)
 
 ## Logging
 
 When the cleaning process is run, the output files are generated and a log file is written to with a timestamp. This log file also contains information on when the data was tested.
 
-![Log File](images\log.png)
+![Log File](images/log.png)
 
 ## Output Files Summary
 

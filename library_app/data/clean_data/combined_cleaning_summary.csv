@@ -1,0 +1,6 @@
+Description,Customers,Loans
+Initial Rows,9,114
+Duplicates Removed,0,92
+Nulls Removed,1,2
+Loan Date Errors Removed,N/A,14
+Final Row Count,8,6

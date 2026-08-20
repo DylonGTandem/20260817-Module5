@@ -11,9 +11,9 @@ def fileLoader(filepath):
 script_dir = Path(__file__).resolve().parent
 
 # Get data 
-loan_data = fileLoader(filepath = script_dir.parent / 'data' / 'loan_data_cleaned.csv')
+loan_data = fileLoader(filepath = script_dir.parent / 'library_app' / 'data' / 'loan_data_cleaned.csv')
 
-customer_data = fileLoader(filepath = script_dir.parent / 'data' / 'customers_data_cleaned.csv')
+customer_data = fileLoader(filepath = script_dir.parent / 'library_app' / 'data' / 'customers_data_cleaned.csv')
 
 
 class TestDataLoading(unittest.TestCase):

@@ -1,4 +1,4 @@
-## Before starting, in terminal run 'pip install -r requirements.txt'
+## Before starting, in terminal run 'pip install -r req.txt'
 
 import pandas as pd
 from sqlalchemy import create_engine

@@ -13,6 +13,10 @@ The book loans data was validated to confirm that the returned date was after th
 
 ![Book Loan Errors](images/book_loan_errors.png)
 
+Here is the cleaned book loan data.
+
+![Book Loans](images/Books.png)
+
 ## Customers
 
 There was a single customer which had no name or id, so it was removed from the set. Below is the cleaned customer list.
@@ -44,5 +48,6 @@ log.txt - Execution timestamp log tracking successful artifact generation.
 ## Next Steps - End to End Automation
 
 This can be turned into an automated process, where files are automatically picked up from a specified location, have the process automatically triggered and then exported to an SQL database. 
+
 
 The SQL database can then be linked to a Power BI dashboard wihch allows the cleaned data to be accessed, in addition to the cleaning information and when the last file ingestion, cleaning and testing was performed.

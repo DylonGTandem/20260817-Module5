@@ -19,6 +19,8 @@ There was a single customer which had no name or id, so it was removed from the 
 
 ![Customers](images\customers.png)
 
+## Logging
+
 When the cleaning process is run, the output files are generated and a log file is written to with a timestamp. This log file also contains information on when the data was tested.
 
 ![Log File](images\log.png)

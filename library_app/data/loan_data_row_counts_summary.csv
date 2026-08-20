@@ -1,0 +1,5 @@
+Description,Count
+Initial Rows,114
+After Deduplication,22
+After Removing Nulls,20
+After Removing Loan Data Errors,6

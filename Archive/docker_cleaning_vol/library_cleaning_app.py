@@ -36,7 +36,7 @@ def dateCleaner(col, df):
     error_flag = pd.to_datetime(df[col], dayfirst=True, errors='coerce').isna()
         
     # Move invalid rows to date_errors - Future feature
-    #date_errors = df[error_flag]
+    date_errors = df[error_flag]
         
     # Keep only valid rows in df
     df = df[~error_flag].copy()
@@ -81,9 +81,16 @@ if __name__ == '__main__':
     print('**************** Starting Clean ****************')
 
     # Instantiation
-    #dropCount= 0
-    #customer_drop_count = 0
-    filepath_input = '03_LibrarySystembook.csv'
+    dropCount= 0
+    customer_drop_count = 0
+
+    # Find parent directory
+    script_dir = Path(__file__).resolve().parent
+
+    # Get data path
+
+    filepath_input = script_dir.parent / 'data' / '03_LibrarySystembook.csv'
+
     date_columns = ['Book checkout', 'Book Returned']
     date_errors = None
 
@@ -112,7 +119,7 @@ if __name__ == '__main__':
     #print(data)
 
     #Cleaning the customer file
-    filepath_input_2 = '03_LibrarySystemCustomers.csv'
+    filepath_input_2 = script_dir.parent / 'data' / '03_LibrarySystemCustomers.csv'
 
     data2 = fileLoader(filepath=filepath_input_2)
 
@@ -126,9 +133,9 @@ if __name__ == '__main__':
     # Write to log
     with out.open("a") as f:
         f.write(f"customers_data_cleaned.csv generated at [{datetime.now()}]\n")
-  
-    print('**************** DATA CLEANED ****************')
 ''' 
+    print('**************** DATA CLEANED ****************')
+
     print('Writing to SQL Server...')
 
     writeToSQL(

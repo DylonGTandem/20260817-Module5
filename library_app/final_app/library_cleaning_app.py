@@ -1,7 +1,5 @@
 ## Before starting, in terminal run 'pip install -r req.txt'
-
 import pandas as pd
-from sqlalchemy import create_engine
 from pathlib import Path
 from datetime import datetime
 

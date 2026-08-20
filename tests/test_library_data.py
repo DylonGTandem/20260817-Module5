@@ -31,7 +31,7 @@ class TestDataLoading(unittest.TestCase):
 
 if __name__ == "__main__":
        # Generate log file path
-       out = Path("log.txt")
+       out = Path(script_dir.parent / 'library_app' / 'final_app' / 'log.txt')
        with out.open("a") as f:
         f.write(f"Library data tested at [{datetime.now()}]\n")
        unittest.main()

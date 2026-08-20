@@ -11,8 +11,8 @@ def fileLoader(filepath):
 script_dir = Path(__file__).resolve().parent
 
 # Get data 
-loan_data = fileLoader(filepath = script_dir.parent / 'library_app' / 'data' / 'loan_data_cleaned.csv')
-customer_data = fileLoader(filepath = script_dir.parent / 'library_app' / 'data' / 'customers_data_cleaned.csv')
+loan_data = fileLoader(filepath = script_dir.parent / 'library_app' / 'data' / 'clean_data' / 'loan_data_cleaned.csv')
+customer_data = fileLoader(filepath = script_dir.parent / 'library_app' / 'data' / 'clean_data' / 'customers_data_cleaned.csv')
 
 
 class TestDataLoading(unittest.TestCase):
@@ -30,7 +30,7 @@ class TestDataLoading(unittest.TestCase):
 
 if __name__ == "__main__":
     # Generate log file path
-    out = Path(script_dir.parent / 'library_app' / 'final_app' / 'log.txt')
+    out = Path(script_dir.parent / 'library_app' / 'log.txt')
     with out.open("a") as f:
         f.write(f"Library data tested at [{datetime.now()}]\n")
     unittest.main()
